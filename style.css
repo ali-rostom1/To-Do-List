@@ -1,3 +1,44 @@
 body{
     background-color: #391a76;
+    font-family: 'Jost';
+}
+.headerHeading{
+    color: white;
+}
+.button1{
+    background-color: #77267C;
+    color: white;
+
+}
+.boardRow{
+    margin-top: 10vh;
+    background-color: #BD7A6D;
+    border-radius: 2rem;
+    padding: 2rem 0;
+}
+.boardColumn{
+    color: white;
+    min-height: 50vh;
+    
+}
+.boardColumn + .boardColumn{
+    border-left: 1px white solid;
+}
+.task-card{
+    background-color: #CEB28C;
+    color: black;
+    margin: 5vh 3vh;
+    border-radius: 15px;
+    border: 1px red solid;
+}
+.task-button{
+    background-color: #77267C;
+    padding: 0 3vh;
+    color: white;
+    border-radius: 35px;
+}
+.button2{
+    background-color: #77267C;
+    color: white;
+    border-radius: 20px;
 }
