@@ -29,7 +29,6 @@ body{
     color: black;
     margin: 5vh 3vh;
     border-radius: 15px;
-    border: 1px red solid;
 }
 .task-button{
     background-color: #77267C;
@@ -45,9 +44,7 @@ body{
     color: white;
     border-radius: 20px;
 }
-.hero_area header, .board{
-    
-}
+
 .formModal{
     min-height: 80vh;
     background-color: #BD7A6D;
@@ -79,4 +76,13 @@ body{
     background-color: #9F3B59;
     color: white;
     border-radius: 20px;
+}
+.lowPrio{
+    border: 3px rgba(0, 255, 0, 0.5) solid;
+}
+.mediumPrio{
+    border: 3px rgba(255, 165, 0 , 0.5) solid;
+}
+.highPrio{
+    border: 3px rgba(255, 0, 0, 0.5) solid;
 }
