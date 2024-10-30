@@ -37,8 +37,46 @@ body{
     color: white;
     border-radius: 35px;
 }
+.task-button:hover{
+    color: white;
+}
 .button2{
     background-color: #77267C;
+    color: white;
+    border-radius: 20px;
+}
+.hero_area header, .board{
+    
+}
+.formModal{
+    min-height: 80vh;
+    background-color: #BD7A6D;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.addHeading{
+    color: white;
+    border-radius: 20px 20px 50px 50px;
+    background-color: #9F3B59;
+}
+.nameInput{
+    width: 90%;
+}
+.nameInput::placeholder{
+    opacity: 0.5;
+}
+.dateInput{
+    width: 90%;
+}
+.descriptionInput{
+    width: 90%;
+}
+.button3{
+    background-color: #9F3B59;
     color: white;
     border-radius: 20px;
 }
