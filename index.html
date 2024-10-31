@@ -74,7 +74,7 @@
                         <label for="nameInput">Name : </label>
                     </div>
                     <div class="col-md-5 fs-5 d-flex justify-content-start align-items-center ms-4">
-                        <input type="text" class="nameInput p-2" id="nameInput" placeholder="Planing...">
+                        <input type="text" class="nameInput p-2" id="nameInput" placeholder="Planing..." pattern="[a-zA-Z0-9]{5,}" required>
                     </div>
                 </div>
                 <!-- date input -->
@@ -83,7 +83,7 @@
                         <label for="dateInput">End Date : </label>
                     </div>
                     <div class="col-md-3 fs-5 d-flex justify-content-start align-items-center ms-4">
-                        <input type="date" id="dateInput" class="dateInput p-2">
+                        <input required type="date" id="dateInput" class="dateInput p-2">
                     </div>
                 </div>
                 <!-- status input -->
@@ -92,8 +92,8 @@
                         <label for="statusInput" >Status : </label>
                     </div>
                     <div class="col-md-3 fs-5 d-flex justify-content-start align-items-center ms-4">
-                        <select  id="statusInput" class="dateInput p-2">
-                            <option selected>-</option>
+                        <select required id="statusInput" class="statusInput p-2">
+                            <option value="">-</option>
                             <option value="1">To do</option>
                             <option value="2">Doing</option>
                             <option value="3">Done</option>
@@ -106,8 +106,8 @@
                         <label for="priorityInput" >Priority : </label>
                     </div>
                     <div class="col-md-3 fs-5 d-flex justify-content-start align-items-center ms-4">
-                        <select  id="priorityInput" class="dateInput p-2">
-                            <option selected>-</option>
+                        <select required id="priorityInput" class="dateInput p-2">
+                            <option value="">-</option>
                             <option value="1">P1</option>
                             <option value="2">P2</option>
                             <option value="3">P3</option>
@@ -120,7 +120,7 @@
                         <label for="descriptionInput" >description : </label>
                     </div>
                     <div class="col-md-5 fs-5 d-flex justify-content-start align-items-center ms-4">
-                        <textarea class="descriptionInput p-2" placeholder="creating index.html..." id="descriptionInput"></textarea>
+                        <textarea class="descriptionInput p-2" placeholder="creating index.html..." id="descriptionInput" pattern="[a-zA-Z0-9]{3,}"></textarea>
                     </div>
                     <div class="col-md-3 fs-5 d-flex justify-content-center align-items-end">
                         <button type="submit" class="btn button3 py-3 px-4">CONFIRM</button>
@@ -128,7 +128,6 @@
                 </div>
             </form>
         </div>
-        
     </section>
     <script src="script.js"></script>
 </body>

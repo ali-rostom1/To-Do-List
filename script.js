@@ -20,7 +20,7 @@ popupCloseButton.onclick = function closeFormModal(){
 
 // adding cards
 var myForm = document.getElementById('taskForm');
-myForm.addEventListener('submit',function(event){
+myForm.addEventListener('submit',function (event){
     event.preventDefault();
 
     var inputName = document.getElementById('nameInput').value;
@@ -31,13 +31,13 @@ myForm.addEventListener('submit',function(event){
     var card = document.createElement('div');
     var prio='';
     if(inputPriority == 1 ){
-        prio = 'lowPrio' ;
+        prio = 'highPrio' ;
     }
     if(inputPriority == 2){
         prio ='mediumPrio' ;
     }
     if(inputPriority == 3){
-        prio ='highPrio';
+        prio ='lowPrio';
     }
     card.className = `task-card p-3 ${prio}`;
     card.innerHTML = `
@@ -68,6 +68,8 @@ myForm.addEventListener('submit',function(event){
     formModal.style.display = 'none';
     heroArea.children[0].style.display = 'block';
     heroArea.children[1].style.display = 'block';
+
+    
 });
 
 
