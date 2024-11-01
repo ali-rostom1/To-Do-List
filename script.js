@@ -1,4 +1,4 @@
-
+var totalCards=0; 
 // open and close ADD FORM
 var popupButton = document.getElementById('buttonAdd');
 var formModal = document.getElementById('formModal');
@@ -17,7 +17,7 @@ popupCloseButton.onclick = function closeFormModal(){
     heroArea.children[0].style.display = 'block';
     heroArea.children[1].style.display = 'block';
 }
-
+var deleteButton=deleteButton = document.querySelectorAll("#btn-del");
 // adding cards
 var myForm = document.getElementById('taskForm');
 myForm.addEventListener('submit',function (event){
@@ -62,14 +62,17 @@ myForm.addEventListener('submit',function (event){
     if(inputStatus == 3){
         document.getElementById('doneContainer').appendChild(card);
     }
+    deleteButton = document.querySelectorAll("#btn-del");
+    for(let i = 0; i<deleteButton.length;i++){
+        deleteButton[i].addEventListener('click' ,function(){
+            deleteButton[i].closest(".task-card").remove();
+        });
+    }
     
+
 
     myForm.reset();
     formModal.style.display = 'none';
     heroArea.children[0].style.display = 'block';
     heroArea.children[1].style.display = 'block';
-
-    
 });
-
-
