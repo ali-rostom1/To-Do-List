@@ -112,6 +112,7 @@ function addTaskToBoard(task){
     if(task.status == 3){
         document.getElementById('doneContainer').appendChild(card);
     }
+    applyCounters();
     deleteTaskButton(task); 
     editTaskButton(task); 
 }
@@ -124,6 +125,7 @@ function deleteTaskButton(task){
         Tasks.pop(task);
         console.log(Tasks);
     }
+    applyCounters();
 }
 
 var editModal = document.getElementById('editModal');
@@ -164,6 +166,63 @@ function editTaskButton(task){
             editModal.style.display = 'none';
             
         }
+        applyCounters();
     }
 
+}
+
+
+//ADDING COUNTERS FOR EACH STATUS
+
+function getToDoCounter(){
+    let counter=0;
+    Tasks.forEach(task => {
+        if(task.status == 1){
+            counter++;
+        }
+    });
+    return counter;
+}
+
+function getDoingCounter(){
+    let counter = 0;
+    Tasks.forEach(task =>{
+        if(task.status == 2){
+            counter++;
+        }
+    });
+    return counter;
+}
+
+function getDoneCounter(){
+    let counter = 0;
+    Tasks.forEach(task =>{
+        if(task.status == 3){
+            counter++;
+        }
+    });
+    return counter;
+}
+
+var toDoContainer = document.getElementById('toDoContainer');
+var doingContainer = document.getElementById('doingContainer');
+var doneContainer = document.getElementById('doneContainer');
+
+
+function applyCounters(){
+    if(getToDoCounter() > 0){
+        toDoContainer.children[0].textContent = `TO DO | ${getToDoCounter()}`;
+    }else{
+        toDoContainer.children[0].textContent = `TO DO | 0`;
+    }
+    if(getDoingCounter() > 0){
+        doingContainer.children[0].textContent = `DOING | ${getDoingCounter()}`;
+    }else{
+        doingContainer.children[0].textContent = `DOING | 0`;
+    }
+    if(getDoneCounter() > 0){
+        doneContainer.children[0].textContent = `DONE | ${getDoneCounter()}`;
+    }else{
+        doneContainer.children[0].textContent = `DONE | 0`;
+    }
 }
