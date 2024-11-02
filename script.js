@@ -112,7 +112,8 @@ function addTaskToBoard(task){
     if(task.status == 3){
         document.getElementById('doneContainer').appendChild(card);
     }
-    deleteTaskButton(task);  
+    deleteTaskButton(task); 
+    editTaskButton(task); 
 }
 
 function deleteTaskButton(task){
