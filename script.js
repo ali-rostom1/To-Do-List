@@ -125,3 +125,45 @@ function deleteTaskButton(task){
         console.log(Tasks);
     }
 }
+
+var editModal = document.getElementById('editModal');
+var editTaskForm = document.getElementById('taskEditForm');
+var closePopupEditBtn = document.getElementById('closeButton2');
+
+closePopupEditBtn.onclick = function(){
+    editModal.style.display = 'none';
+}
+
+function editTaskButton(task){
+    let editBtn = document.getElementById(`${task.editBtnId}`);
+    editBtn.onclick = function(){
+        editModal.style.display = 'block';
+        var inputName = document.getElementById('nameInputEdit');
+        var inputDate = document.getElementById('dateInputEdit');
+        var inputStatus = document.getElementById('statusInputEdit');
+        var inputPriority = document.getElementById('priorityInputEdit');
+        var inputDescription = document.getElementById('descriptionInputEdit');
+        inputName.value = task.name;
+        inputDate.value = task.date;
+        inputStatus.value = task.status;
+        inputPriority.value = task.prio;
+        inputDescription.value = task.description;
+        editTaskForm.onsubmit = function(event){
+            event.preventDefault();
+
+            task.name = inputName.value;
+            task.date = inputDate.value;
+            task.status = inputStatus.value;
+            task.prio = inputPriority.value;
+            task.description = inputDescription.value;
+            console.log(Tasks);
+            let card=editBtn.closest('.task-card');
+            card.remove();
+            addTaskToBoard(task);
+            editTaskForm.reset();
+            editModal.style.display = 'none';
+            
+        }
+    }
+
+}
