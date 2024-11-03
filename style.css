@@ -60,9 +60,14 @@ body{
     transform: translate(-50%,-50%);
     display: none;
 }
+@media (max-width:768px){
+    .formModal{
+        transform: translate(-50%,-30%);
+    }
+}
 .addHeading{
     color: white;
-    border-radius: 20px 20px 50px 50px;
+    border-radius: 0 0 50px 50px;
     background-color: #9F3B59;
 }
 .nameInput{
@@ -93,4 +98,9 @@ body{
 }
 .highPrio{
     border: 3px rgba(255, 0, 0, 0.5) solid;
+}
+footer{
+    background-color: #9F3B59;
+    color: white;
+    border-top: 1px solid black;
 }

@@ -7,7 +7,6 @@ var popupCloseButton = document.getElementById('closeButton');
 popupButton.onclick = function displayFormModal(){
     
     formModal.style.display = 'block';
-    
 }
 popupCloseButton.onclick = function closeFormModal(){
     formModal.style.display = 'none';
@@ -124,8 +123,9 @@ function deleteTaskButton(task){
         card.remove();
         Tasks.pop(task);
         console.log(Tasks);
+        applyCounters();
     }
-    applyCounters();
+    
 }
 
 var editModal = document.getElementById('editModal');
