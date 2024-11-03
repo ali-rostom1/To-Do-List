@@ -3,14 +3,22 @@
 var popupButton = document.getElementById('buttonAdd');
 var formModal = document.getElementById('formModal');
 var popupCloseButton = document.getElementById('closeButton');
+var overlay = document.getElementById('overlay');
 
 popupButton.onclick = function displayFormModal(){
     
     formModal.style.display = 'block';
+    overlay.style.display = 'block';
 }
 popupCloseButton.onclick = function closeFormModal(){
     formModal.style.display = 'none';
+    overlay.style.display = 'none';
 }
+overlay.addEventListener('click', function(){
+    formModal.style.display = 'none';
+    editModal.style.display = 'none';
+    overlay.style.display = 'none';
+})
 
 function Task(name,date,status,prio,description){
     this.name = name;
@@ -40,6 +48,7 @@ taskForm.addEventListener('submit',function(event){
 
     taskForm.reset();
     formModal.style.display = 'none';
+    overlay.style.display = 'none';
 })
 function addTasksToBoard(){
     Tasks.forEach(Task => {
@@ -54,7 +63,7 @@ function addTasksToBoard(){
         if(Task.prio == 3){
             prio = 'lowPrio';
         }
-        card.className=`task-card p-3 ${prio}`;
+        card.className=`task-card p-3 ${prio} `;
         card.innerHTML=`
                 <div class="row align-items-center ">
                     <div class="col-lg-12 col-md-12 task-name text-md-start mb-3">${Task.name}</div>
@@ -90,7 +99,7 @@ function addTaskToBoard(task){
     if (task.prio == 3){
         prio = 'lowPrio';
     }
-    card.className=`task-card p-3 ${prio}`;
+    card.className=`task-card p-3 ${prio} fadeIn`;
     card.innerHTML=`
             <div class="row align-items-center ">
                 <div class="col-lg-12 col-md-12 task-name text-md-start mb-3">${task.name}</div>
@@ -120,10 +129,13 @@ function deleteTaskButton(task){
     let delBtn = document.getElementById(`${task.delBtnId}`);
     delBtn.onclick = function(){
         let card = delBtn.parentNode.parentNode.parentNode;
-        card.remove();
-        Tasks.pop(task);
-        console.log(Tasks);
-        applyCounters();
+        card.classList.add('fadeOut');
+        card.addEventListener('animationend',function (){
+            card.remove();
+            Tasks.pop(task);
+            console.log(Tasks);
+            applyCounters();
+        })
     }
     
 }
@@ -134,12 +146,14 @@ var closePopupEditBtn = document.getElementById('closeButton2');
 
 closePopupEditBtn.onclick = function(){
     editModal.style.display = 'none';
+    overlay.style.display = 'none';
 }
 
 function editTaskButton(task){
     let editBtn = document.getElementById(`${task.editBtnId}`);
     editBtn.onclick = function(){
         editModal.style.display = 'block';
+        overlay.style.display = 'block';
         var inputName = document.getElementById('nameInputEdit');
         var inputDate = document.getElementById('dateInputEdit');
         var inputStatus = document.getElementById('statusInputEdit');
@@ -164,6 +178,7 @@ function editTaskButton(task){
             addTaskToBoard(task);
             editTaskForm.reset();
             editModal.style.display = 'none';
+            overlay.style.display = 'none';
             
         }
         applyCounters();
