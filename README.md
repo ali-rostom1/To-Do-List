@@ -6,10 +6,8 @@ TaskFlow est une application de gestion de tâches conçue pour améliorer l'eff
 ## Table des Matières
 - [Fonctionnalités](#fonctionnalités)
 - [Technologies Utilisées](#technologies-utilisées)
+- [Liens Utiles](#liens-utiles)
 - [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Contributions](#contributions)
-- [License](#license)
 
 ## Fonctionnalités
 - Ajouter des tâches via un modal avec des champs pour le titre, la description, le statut, la date d’échéance et la priorité.
@@ -20,7 +18,7 @@ TaskFlow est une application de gestion de tâches conçue pour améliorer l'eff
 - Validation des formulaires pour garantir la qualité des données.
 - Interactions dynamiques avec JavaScript (animations d'ajout et de suppression).
 - Accessibilité améliorée (contraste de couleurs, labels pour les éléments de formulaire).
-- Déploiement en ligne via GitHub Pages ou Vercel.
+- Déploiement en ligne via GitHub Pages .
 
 ## Bonus
 - Modal pour ajouter plusieurs tâches à la fois.
@@ -35,6 +33,11 @@ TaskFlow est une application de gestion de tâches conçue pour améliorer l'eff
 - HTML
 - CSS (Bootstrap CSS)
 - JavaScript
+
+## Liens Utiles
+- Design Figma: [Lien vers le design Figma](https://www.figma.com/design/Yjsafr6MFE2sFT3Cs6Clib/brief-4?node-id=0-1&t=b6QSVdGD9Hg60yuQ-1)
+- Déploiement GitHub Pages: [Lien vers la version déployée](https://ali-rostom1.github.io/To-Do-List/)
+- Dépôt GitHub: [Lien vers le dépôt GitHub](https://github.com/ali-rostom1/To-Do-List) 
 
 ## Installation
 1. Clonez le dépôt :
