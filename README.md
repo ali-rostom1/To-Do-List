@@ -35,9 +35,10 @@ TaskFlow est une application de gestion de tâches conçue pour améliorer l'eff
 - JavaScript
 
 ## Liens Utiles
+- Presentation du projet: [lien vers la presentation](https://www.canva.com/design/DAGVcKIFxs0/JFmjntSqyQ3nNSP4F1XB9A/edit?utm_content=DAGVcKIFxs0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 - Design Figma: [Lien vers le design Figma](https://www.figma.com/design/Yjsafr6MFE2sFT3Cs6Clib/brief-4?node-id=0-1&t=b6QSVdGD9Hg60yuQ-1)
 - Déploiement GitHub Pages: [Lien vers la version déployée](https://ali-rostom1.github.io/To-Do-List/)
-- Dépôt GitHub: [Lien vers le dépôt GitHub](https://github.com/ali-rostom1/To-Do-List) 
+- Dépôt GitHub: [Lien vers le dépôt GitHub](https://github.com/ali-rostom1/To-Do-List)
 
 ## Installation
 1. Clonez le dépôt :
